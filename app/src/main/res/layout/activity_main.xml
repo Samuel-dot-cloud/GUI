@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+    <TextView
+        android:id="@+id/fstTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Name" />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtVw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:text="Select favourite food:"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtVw"
+        android:layout_toRightOf="@+id/txtVw" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="200dp"
+        android:text="Select your gender:"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:id="@+id/genderLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/spinner1"
+        android:layout_marginTop="50dp">
+    <CheckBox
+        android:id="@+id/chkMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="100dp"
+        android:text="Male"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:id="@+id/chkFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="100dp"
+        android:text="Female"
+        android:onClick="onCheckboxClicked"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/spinner1"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="50dp">
+        <RadioButton
+            android:id="@+id/chk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+</RelativeLayout>
